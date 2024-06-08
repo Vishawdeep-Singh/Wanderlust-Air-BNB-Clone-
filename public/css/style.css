@@ -1,0 +1,132 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+html,body{
+    height: 100%;
+    font-family: "Plus Jakarta Sans", sans-serif !important;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+body{
+  
+    display: flex; 
+    flex-direction: column;
+   
+
+}
+.wholenav{
+    display: flex;
+    justify-content: space-between;
+}
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    flex: 1;
+}
+.content {
+    flex: 1;
+}
+.container{
+    flex: 1 ;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar{
+    height: 5rem;
+}
+
+.fa-compass{
+    color: #fe424d;
+    font-size: 2rem;
+}
+.nav-link{
+    color: #222222 !important;
+}
+
+/* footer */
+
+.f-info-links a{
+    text-decoration: none;
+    color: #222222;
+}
+
+.f-info-links a:hover{
+    text-decoration: underline;
+}
+
+.f-info{
+    height: 8rem;
+    display: flex;
+    flex-direction: column;
+    background-color: #ebebeb;
+    justify-content: space-around;
+    align-items: center;
+
+}
+.f-info-socials{
+    font-size: 1.5rem;
+    width: 15%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.fa-square-facebook:hover{
+    color: blue;
+}
+.fa-square-instagram:hover{
+    color: #E1306C
+}
+
+.fa-linkedin:hover{
+    color: #0a66c2;
+}
+
+
+
+.listing-card{
+    border: none !important;
+    margin-bottom: 2rem;
+}
+
+.card-img-top{
+    border-radius: 1rem !important;
+    width: 100% !important;
+    object-fit: cover !important;
+    
+}
+
+.card-body{
+    padding: 0;
+}
+.card-img-overlay{
+    opacity: 0;
+}
+.card-img-overlay:hover{
+opacity: 0.2;
+background-color: white;
+}
+
+.add-btn{
+    background-color:  #fe424d !important; 
+}
+
+
+.show-img{
+    height: 30vh;
+}
+
+.btns a{
+  margin-bottom: 2rem;
+  background-color: #fe424d;
+}
+.btns form button{
+    margin-bottom: 2rem;
+    
+  }
+
+
+  #map{
+    height: 400px;
+    width: 80vh;
+  }
