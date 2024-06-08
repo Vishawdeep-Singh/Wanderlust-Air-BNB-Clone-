@@ -1,3 +1,5 @@
+const User = require("../db/user.js");
+
 module.exports.userSignUpForm = (req,res)=>{
     res.render("users/signup.ejs");
     }
@@ -6,7 +8,7 @@ module.exports.userSignUpForm = (req,res)=>{
 module.exports.userSignUp=async (req,res)=>{
     try{
         let {username,email,password} = req.body;
-        const newUser= new User({email,username});
+        const newUser= new User({email,username}); 
        const registeredUser = await User.register(newUser,password);
        console.log(registeredUser);
        req.login(registeredUser,((err)=>{  //Automatic log in after sign up
@@ -20,6 +22,7 @@ module.exports.userSignUp=async (req,res)=>{
        
     }
     catch(err){
+        console.log(err)
        req.flash("error",err.message);
        res.redirect("/signup");
        
