@@ -102,8 +102,20 @@ app.use((req,res,next)=>{
 
 
 
-
-
+app.get('/api/listings', async (req, res) => {
+    const { title } = req.query;
+  
+    try {
+      const listings = await Listing.find(
+        { title: { $regex: new RegExp(title, 'i') } }, // Case-insensitive search
+        { _id: 1, title: 1 }
+      );
+      res.json(listings);
+    } catch (err) {
+      console.error('Error searching for listings:', err);
+      res.status(500).json({ error: 'Internal server error' });
+    }
+  });
 
 app.use("/listings",listingsRouter);
 app.use("/listings/:id/reviews",reviewsRouter) // So that :id param not only limited or access to use in app.js , it can be used in other pages or go further into our routes we use "merge params".

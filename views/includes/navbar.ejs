@@ -1,20 +1,4 @@
-<style>
-  .btn-search{
-    background-color: #fe424d;
-    color: white;
-    border-radius: 25px;
-    padding: 0 1rem 0 1rem;
-  }
-  .btn-search:hover{
-    background-color: #fe424d;
-    color: white;
-  }
-  .btn-search i {
-    display: inline;
-    margin-right: 0.5rem;
-  }
-</style>
-
+<link rel="stylesheet" href="/css/nav-styling.css">
 
 
 <nav class="navbar navbar-expand-md bg-body-tertiary border-bottom sticky-top">
@@ -32,9 +16,12 @@
         </div>
         <div class="navbar-nav">
           <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search destinations" aria-label="Search">
+            <input class="form-control me-2" type="search" placeholder="Search destinations" aria-label="Search" id="Search-Input">
             <button class="btn btn-search" type="submit"><i class="fa-solid fa-magnifying-glass"></i>Search</button>
           </form>
+          <div class="suggestions">
+
+          </div>
         </div>
         <div class="navbar-nav">
           <a class="nav-link" href="/listings/new">Add New Listing</a>
@@ -50,4 +37,10 @@
         </div>
       </div>
     </div>
+    
+    <script src="/js/search.js"></script>
   </nav>
+
+  
+
+  
