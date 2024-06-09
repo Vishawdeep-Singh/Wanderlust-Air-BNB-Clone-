@@ -1,44 +1,76 @@
-
-  .btn-search{
+.btn-search {
     background-color: #fe424d;
     color: white;
     border-radius: 25px;
     padding: 0 1rem 0 1rem;
-  }
-  .btn-search:hover{
+}
+
+.btn-search:hover {
     background-color: #fe424d;
     color: white;
-  }
-  .btn-search i {
+}
+
+.btn-search i {
     display: inline;
     margin-right: 0.5rem;
-  }
-  .suggestions {
-      border: 1px solid #ddd;
-      max-height: 200px;
-      overflow-y: auto;
-      position: absolute;
+}
 
-     top: 100%;   /* : This means that the .suggestions box will be placed such that its top edge is 100% of the height of the navbar-nav <div> below the top of the navbar-nav <div>. Essentially, the .suggestions box will appear directly below the navbar-nav <div> */
-     
-      background: rgb(255, 254, 254);
-      width: 50%;
-      
+.suggestions {
+    border: 1px solid #ddd;
+    max-height: 200px;
+    overflow-y: auto;
+    position: absolute;
 
-      display: none;
-      transform: translateX(-25%);
-      font-weight: bolder;
-     
+    top: 100%;
+    /* : This means that the .suggestions box will be placed such that its top edge is 100% of the height of the navbar-nav <div> below the top of the navbar-nav <div>. Essentially, the .suggestions box will appear directly below the navbar-nav <div> */
+
+    background: rgb(255, 254, 254);
+    width: 50%;
+
+
+    display: none;
+    transform: translateX(-25%);
+    font-weight: bolder;
+
+}
+
+.suggestion-item {
+    padding: 8px;
+    cursor: pointer;
+}
+
+.suggestion-item:hover {
+    background: #f0f0f0;
+}
+
+@media (max-width: 767px) {
+
+    .navbar-collapse {
+        background-color: #cbdced;
+        /* Dark background color */
+        padding: 10px;
+        /* Add padding to the navbar content */
+        /* Initially hide the navbar */
+        /* Hide overflow content */
+        transition: 0.6s ease-in-out;
+        /* Add transition effect */
     }
-    .suggestion-item {
-      padding: 8px;
-      cursor: pointer;
+
+    .navbar-collapse.show {
+        max-height: 500px;
+
     }
-    .suggestion-item:hover {
-      background: #f0f0f0;
+
+    .wholenav {
+        display: grid;
+        justify-content: center;
+
     }
-  
+    .suggestions{
+        top: 9rem;
+        transform: translateX(+0%);
+       
+    }
+}
 
 /* Optionally, adjust the position of the suggestions dropdown for better visibility */
-
-

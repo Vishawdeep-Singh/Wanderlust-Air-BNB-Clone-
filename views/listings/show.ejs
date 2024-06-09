@@ -7,6 +7,47 @@
     const title1 = <%- JSON.stringify(listing.title ) %>
 </script>
 
+<style>
+    @media(max-width: 550px){
+        .card{
+           width: 100%;
+           margin: 10px 0;
+        }
+        .mapper{
+           font-size:x-small;
+        
+           
+        }
+        #map{
+            width: 20rem;
+            height: 10rem;
+            
+           
+        }
+        /* .reviews{
+            display: grid;
+            grid-template-columns: 1fr;
+            justify-content: center;
+        } */
+       
+    }
+    @media(max-width: 1024px) and  (min-width: 551px){
+        .card{
+           width: 100%;
+           margin: 10px 0;
+        }
+       
+        #map{
+            width:25rem;
+            height: 15rem;
+            
+           
+        }
+       
+    }
+
+</style>
+
     
         <div class="row">
             <div class="col-8 offset-2">
@@ -83,7 +124,7 @@
 
                         </div>
                         <% } %>
-                            <div class="col-8 offset-3">
+                            <div class="col-8 ">
                                 
                              <%if(listing.reviews.length>0) {%>
                                 <p><b>
@@ -91,7 +132,7 @@
                                 </b>
                             </p>
                                 <%}%>
-                                <div class="row">
+                                <div class="row reviews">
                                    
                                     <% for (review of listing.reviews) { %>
                                         <div class="card col-5 mb-3  ms-3">
@@ -119,7 +160,7 @@
                                 
                                 
                             </div>
-                            <div class="col-8 offset-3 mb-3">
+                            <div class="col-8 mb-3 offset-3 mapper">
                                 <h3>Where you will be</h3>
                                 <div id="map"></div>
                                 

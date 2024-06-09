@@ -2,7 +2,7 @@
     .filters {
       display: flex;
       flex-wrap: wrap;
-     justify-content: space-evenly;
+     justify-content: space-between;
      align-items: center;
     }
 
@@ -33,4 +33,49 @@
     .tax-info{
       display: none;
     }
+
+    @media (max-width: 283px) {
+        
+        .filter{
+            font-size: 0.8rem;
+        }
+        .filters{
+            display: grid;
+            grid-template-rows: 1fr 1fr 1fr;
+            grid-template-columns: 1fr 1fr ;
+           }
+           .tax-toggle{
+            grid-column: 1/3;
+           font-size: small;
+            
+          }
+      }
+      @media (min-width: 284px) and (max-width: 767px) {
+       .filters{
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+       }
+       .tax-toggle{
+        grid-column: 1/4;
+        justify-content: center;
+        font-size: 1rem;
+        
+      }
+      .navbar-expand-md{
+        background-color: black;
+      }
+      }
+      
+      @media(max-width: 991px){
+        .tax-toggle {
+            margin: 1rem;
+            
+          }
+          .filter{
+            font-size: 0.9rem;
+        }
+      }
+      
+     
 
